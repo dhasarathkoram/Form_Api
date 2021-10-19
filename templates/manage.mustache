@@ -1,0 +1,70 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_message/manage
+
+
+    Example context (json):
+    {
+
+    }
+}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="alert alert-warning">
+    <strong>Hello  {{name}}!</strong> welcome to: <strong>{{wish}}</strong>
+</div>
+
+
+<hr>
+<h1>List of messages</h1>
+{{#messages}}
+    <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <p>{{messagetext}}</p>
+
+
+
+<button class="local_messageid{{id}} btn btn-danger local_message_delete_button">
+          <span class="glyphicon glyphicon-trash"></span> delete
+        </button>
+
+
+              <button class="btn btn-info btn-sm" onclick="location.href='{{editurl}}?messageid={{id}}'">
+                      <span class="glyphicon glyphicon-pencil">edit</span>
+                    </button>
+        </div>
+    </div>
+{{/messages}}
+
+<hr>
+
+
+  <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='{{editurl}}'">
+          <span class="glyphicon glyphicon-plus"></span> newMessage
+        </button>
+
+
+ <button type="button" class="btn btn-primary btn-sm" value="Homepage" onclick="location.href='{{edurl}}'">
+          <span class="glyphicon glyphicon-home"></span>Homepage
+        </button>
+
+<hr>
+<div class="alert alert-success">
+ Thanks for visiting <b>{{Bye}}</b> <strong>{{grade}}</strong>
+</div>
